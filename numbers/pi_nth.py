@@ -1,4 +1,4 @@
-# from numbers.utils import factorial
+# from decimal import
 
 # find pi to the nth digit
 
@@ -17,8 +17,10 @@ def estimate_pi(digits, end):
             f = 640320 ** ((3 * k) + 3/2)
             numb1 = d * e * f
             numb2 = 12 * a * b * c
-            number = numb1 / numb2
+            number = float(str(numb1 / numb2)[:end])
     return number
+
+# def numerator()
 
 
 def factorial(input):
@@ -30,5 +32,5 @@ def factorial(input):
 
 
 def test_estimating_pi():
-    pi = estimate_pi(12, 12)
+    pi = estimate_pi(12, 15)
     assert len(str(pi)) == 12, len(str(pi))
